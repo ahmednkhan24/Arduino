@@ -1,9 +1,9 @@
 # Computer Design
-## CS 362
+## University of Illinois (Chicago) - CS 362
 
 Software was develped, tested, and graded using the Arduino Uno hardware.
 
-###### Course Description
+## Course Description
 Computer hardware building blocks 
 * logic gates
 * combinational circuits

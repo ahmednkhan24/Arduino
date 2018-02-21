@@ -8,8 +8,11 @@ A circuit and program that will use a photoresistor and the 16x2 display. The di
 
 ###### LIGHT RANGES
 
-dark:             0-100 
-partially dark: 101-301
-medium:         302-502  
-partially lit:  503-703  
-fully lit:      704+ 
+
+| Light           | Range    |
+| -------------   | -------- |
+| dark            | 0-100    |
+| partially dark  | 101-301  |
+| medium          | 302-502  |
+| partially lit   | 503-703  |
+| fully lit       | 704+     |

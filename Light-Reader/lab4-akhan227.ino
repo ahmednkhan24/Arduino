@@ -40,7 +40,6 @@ void setup()
 {
 
   Serial.begin(9600);
-  pinMode(ledPin, OUTPUT);               // initialize the LED pin as an output
   pinMode(ldrPin, INPUT);                // initialize the LDR pin as an input
 
   lcd.begin(16, 2);                      // tell the system that we are using a 16x2 lcd
@@ -59,26 +58,31 @@ void loop()
   if (ldrStatus >= 704)                            // fully lit
   {
     Serial.println("fully lit");
+    Serial.println(ldrStatus);
     lcd.print("Fully Lit");
   }
   else if (ldrStatus >= 503 && ldrStatus <= 703)   // partially lit
   {
     Serial.println("partially lit");
+    Serial.println(ldrStatus);
     lcd.print("Partially Lit");
   }
   else if (ldrStatus >= 302 && ldrStatus <= 502)   // medium
   {
     Serial.println("medium lit");
+    Serial.println(ldrStatus);
     lcd.print("Medium");
   }
-  else if (ldrStatus >= 101 && ldrStatus <= 301)  // partially dark
+  else if (ldrStatus >= 160 && ldrStatus <= 301)  // partially dark
   {
     Serial.println("partially dark");
+    Serial.println(ldrStatus);
     lcd.print("partially dark");
   }
   else                                            // dark
   {
     Serial.println("dark");
+    Serial.println(ldrStatus);
     lcd.print("dark");
   }
 

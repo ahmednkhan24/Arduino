@@ -29,16 +29,17 @@
     4 LED: 564+
                
   Assumptions: 
+    I first assumed that I had to figure out the range for the potentiometer and the 
+    passive buzzer to use the map() function, but using the tone() method allowed me 
+    to bypass that.
                
   References:  
    https://www.arduino.cc/en/Reference/AnalogWrite
    https://www.arduino.cc/en/Reference/Map
    https://www.arduino.cc/en/Reference/AnalogRead
+   https://www.arduino.cc/reference/en/language/functions/advanced-io/tone/
   
 */
-
-
-
 
 // pin numbers for the 4 led's
 const int led1 = 5;
@@ -49,26 +50,49 @@ const int led4 = 8;
 // the number of the LDR pin
 const int ldrPin = A0; 
 
+// pin number for the passive buzzer
+const int buzzer = 2;
+
+// pin number for the potentiometer
+const int poten = A3;
+
 void setup() 
 {
   Serial.begin(9600);
 
-  // initialize the LDR pin as an input
+  // initialize the LDR pin and the potentiometer as inputs
   pinMode(ldrPin, INPUT);
+  pinMode(poten, INPUT);
 
+  // intialize passive buzzer as output
+  pinMode(buzzer, OUTPUT);
+  
   // intialize led pins as outputs
   pinMode(led1, OUTPUT);
   pinMode(led2, OUTPUT);
   pinMode(led3, OUTPUT);
   pinMode(led4, OUTPUT);
-
 }
 
 void loop() 
 {
-  int ldrStatus = analogRead(ldrPin);   //read the status of the LDR value
+  // read the status of the photoresistor value
+  int ldrStatus = analogRead(ldrPin);   
+
+  // print messages for debugging
+  Serial.print("Light Status: ");
   Serial.println(ldrStatus);
 
+  // read the status of the potentiometer value
+  int potenStatus = analogRead(poten);
+
+  // print messages for debugging
+  Serial.print("Knob Status: ");
+  Serial.println(potenStatus);
+
+  // change the tone of the buzzer based on the value from the potentiometer
+  tone(buzzer, potenStatus);
+  
   // turn all LED's off
   allOff();
 
@@ -90,10 +114,9 @@ void loop()
     allOn();
   }
   
-  
-
-  delay(1000);
+  delay(250);
 }
+
 
 void allOff()
 {

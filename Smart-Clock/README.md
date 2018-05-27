@@ -4,9 +4,11 @@ This assignment is the semester-long final project my two partners and I created
 We created a cool alarm clock that has tons of features any regular alarm clock should have, but then we went above and beyond to implement additional features that we thought would make the project unique. 
 
 In order to read an in-depth documentation of our goals throughout the semester, thought processes, design patterns, and project functionality, check out our Final Project Writeup Documentation. 
+
 [CLICK HERE](https://github.com/akhan227/Computer-Design/blob/master/Smart-Clock/docs/FinalReport.pdf "Link to Report")
 
 In order to see a five minute video showcasing our project in action, check out our Final Project Demonstration Video
+
 [CLICK HERE](https://www.youtube.com/watch?v=lP4CbnmzzfU "Link to Demo Video")
 
 ## Project Requirements

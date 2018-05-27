@@ -5,11 +5,11 @@ We created a cool alarm clock that has tons of features any regular alarm clock 
 
 In order to read an in-depth documentation of our goals throughout the semester, thought processes, design patterns, and project functionality, check out our Final Project Writeup Documentation. 
 
-[CLICK HERE](https://github.com/akhan227/Computer-Design/blob/master/Smart-Clock/docs/FinalReport.pdf "Link to Report")
+[Link to Report](https://github.com/akhan227/Computer-Design/blob/master/Smart-Clock/docs/FinalReport.pdf "Link to Report")
 
 In order to see a five minute video showcasing our project in action, check out our Final Project Demonstration Video
 
-[CLICK HERE](https://www.youtube.com/watch?v=lP4CbnmzzfU "Link to Demo Video")
+[Link to Demo Video](https://www.youtube.com/watch?v=lP4CbnmzzfU "Link to Demo Video")
 
 ## Project Requirements
 * Must work in groups of at least 2 people, but no more than 4 people. Group project should utilize the number people x requirement: If you're group of 3 people, then you need to use 3 arduinos and a total of 6 different external devices
